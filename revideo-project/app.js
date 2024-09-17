@@ -2,7 +2,6 @@ require("dotenv").config(); // Load environment variables from .env
 
 const express = require("express");
 const axios = require("axios");
-const { renderVideo } = require("@revideo/renderer"); // Import the renderVideo function
 const AWS = require("aws-sdk");
 const fs = require("fs"); // Import fs for file handling
 
@@ -19,6 +18,34 @@ const s3 = new AWS.S3({
   secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
   region: process.env.AWS_REGION,
 });
+
+// AWS Lambda configuration
+const lambda = new AWS.Lambda({
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+  region: process.env.AWS_REGION,
+});
+
+// Function to invoke Lambda
+async function invokeLambda(jobId, numWorkers, jobType, variables) {
+  const params = {
+    FunctionName: "revideo-test",
+    Payload: JSON.stringify({
+      jobId,
+      numWorkers,
+      jobType,
+      variables,
+    }),
+  };
+
+  try {
+    const result = await lambda.invoke(params).promise();
+    const responsePayload = JSON.parse(result.Payload);
+    return responsePayload;
+  } catch (error) {
+    throw new Error(`Failed to invoke Lambda: ${error.message}`);
+  }
+}
 
 // Function to upload a file to S3
 function uploadToS3(filePath, bucketName, key) {
@@ -59,48 +86,38 @@ function logProgressToConsole(id, progress) {
   }
 }
 
-// Route to render a video
+// Route to render a video using Lambda
 app.post("/video/render", async (req, res) => {
-  const { projectFile = "./src/project.ts", variables, settings } = req.body;
+  const {
+    jobId = "12345",
+    numWorkers = 25,
+    jobType = "fullRender",
+    variables,
+  } = req.body;
 
   try {
-    console.log("Rendering video...");
+    console.log("Invoking Lambda for video render...");
 
-    // Call the renderVideo function with provided parameters
-    const outputFilePath = await renderVideo({
-      projectFile,
-      variables,
-      settings: {
-        ...settings, // Include any custom settings provided in the request
-        ffmpeg: {
-          ffmpegLogLevel: "error",
-          ffmpegPath: "ffmpeg",
-          ...(settings.ffmpeg || {}),
-        },
-        puppeteer: {
-          headless: true,
-          args: ["--no-sandbox", "--disable-setuid-sandbox"],
-          ...(settings.puppeteer || {}),
-        },
-        // progressCallback: logProgressToConsole,
-      },
-    });
+    // Invoke Lambda function
+    const lambdaResponse = await invokeLambda(
+      jobId,
+      numWorkers,
+      jobType,
+      variables
+    );
 
-    console.log(`Rendered video to ${outputFilePath}`);
+    if (lambdaResponse.statusCode !== 200) {
+      throw new Error("Failed to render video via Lambda.");
+    }
 
-    // Upload the video to S3
-    const bucketName = process.env.S3_BUCKET_NAME; // Use the S3 bucket name from the .env file
-    const key = `videos/${Date.now()}_rendered_video.mp4`; // Define the S3 object key
+    const resultUrl = JSON.parse(lambdaResponse.body).resultUrl;
+    console.log(`Rendered video available at ${resultUrl}`);
 
-    const s3Url = await uploadToS3(outputFilePath, bucketName, key);
-
-    res
-      .status(200)
-      .json({ message: "Video rendered and uploaded successfully", s3Url });
+    res.status(200).json({ message: "Video rendered successfully", resultUrl });
   } catch (error) {
-    console.error("Error rendering or uploading video:", error);
+    console.error("Error rendering video using Lambda:", error);
     res.status(500).json({
-      message: "Failed to render or upload video",
+      message: "Failed to render video using Lambda",
       error: error.message,
     });
   }
