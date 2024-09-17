@@ -1,0 +1,9 @@
+export { default as requirementsEnglish } from './requirements';
+export { default as totalProjectCostEnglish } from './totalProjectCost';
+export { default as fundingEnglish } from './funding';
+export { default as machinesEnglish } from './machines';
+export { default as additionalsEnglish } from './additionals';
+export { default as annualSalesEnglish } from './annualSales';
+export { default as fixedcostEnglish } from './fixedcost';
+export { default as variablecostEnglish } from './variablecost';
+export { default as agriimplementsEnglish } from './agriimplements';
