@@ -1,0 +1,9 @@
+export { default as requirementsHindi } from './requirements';
+export { default as totalProjectCostHindi } from './totalProjectCost';
+export { default as fundingHindi } from './funding';
+export { default as machinesHindi } from './machines';
+export { default as additionalsHindi } from './additionals';
+export { default as annualSalesHindi } from './annualSales';
+export { default as fixedcostHindi } from './fixedcost';
+export { default as variablecostHindi } from './variablecost';
+export { default as agriimplementsHindi } from './agriimplements';
