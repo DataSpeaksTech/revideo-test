@@ -1,10 +1,9 @@
 import { Layout, Txt, Rect, Circle, View2D, Img, Video } from "@revideo/2d";
 import { all, tween, createRef, createSignal, waitFor } from "@revideo/core";
-import jsonData from "./formatted_agri_loss.json";
+// import jsonData from "./formatted_agri_loss.json";
 
-function* fixedcost(view: View2D,videoJson : any) {
-
-  var jsonData = videoJson
+function* fixedcost(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
   const txt1Ref = createRef<Txt>();
   const txt2Ref = createRef<Txt>();
   const txtRentRef = createRef<Txt>();
@@ -96,7 +95,11 @@ function* fixedcost(view: View2D,videoJson : any) {
       <Rect
         radius={10}
         fill="blue"
-        width={Math.max(jsonData.json_response.video.scenes[7].variable_value.bullet_points[0].text.length * 30, 500)}
+        width={Math.max(
+          jsonData.json_response.video.scenes[7].variable_value.bullet_points[0]
+            .text.length * 30,
+          500
+        )}
         height={90}
         x={1300}
         y={-195}
@@ -112,7 +115,8 @@ function* fixedcost(view: View2D,videoJson : any) {
         x={-1400}
       >
         {
-          jsonData.json_response.video.scenes[7].variable_value.bullet_points[0].text
+          jsonData.json_response.video.scenes[7].variable_value.bullet_points[0]
+            .text
         }
       </Txt>
 
@@ -120,7 +124,11 @@ function* fixedcost(view: View2D,videoJson : any) {
       <Rect
         radius={10}
         fill="blue"
-        width={Math.max(jsonData.json_response.video.scenes[7].variable_value.bullet_points[1].text.length * 30, 500)}
+        width={Math.max(
+          jsonData.json_response.video.scenes[7].variable_value.bullet_points[1]
+            .text.length * 30,
+          500
+        )}
         height={90}
         x={1300}
         y={25}
@@ -136,7 +144,8 @@ function* fixedcost(view: View2D,videoJson : any) {
         x={-1400}
       >
         {
-          jsonData.json_response.video.scenes[7].variable_value.bullet_points[1].text
+          jsonData.json_response.video.scenes[7].variable_value.bullet_points[1]
+            .text
         }
       </Txt>
 
@@ -144,7 +153,11 @@ function* fixedcost(view: View2D,videoJson : any) {
       <Rect
         radius={10}
         fill="blue"
-        width={Math.max(jsonData.json_response.video.scenes[7].variable_value.bullet_points[2].text.length * 30, 500)}
+        width={Math.max(
+          jsonData.json_response.video.scenes[7].variable_value.bullet_points[2]
+            .text.length * 30,
+          500
+        )}
         height={90}
         x={1300}
         y={240}
@@ -160,7 +173,8 @@ function* fixedcost(view: View2D,videoJson : any) {
         x={-1400}
       >
         {
-          jsonData.json_response.video.scenes[7].variable_value.bullet_points[2].text
+          jsonData.json_response.video.scenes[7].variable_value.bullet_points[2]
+            .text
         }
       </Txt>
     </Layout>
@@ -187,7 +201,11 @@ function* fixedcost(view: View2D,videoJson : any) {
   yield* all(
     myCircle2().scale(0, 0).to(1, 1),
     txt1Ref().scale(0, 0).to(1, 1),
-    offerletter(0.0, 0).to(jsonData.json_response.video.scenes[7].variable_value.numeric_value.fixed_cost, 2)
+    offerletter(0.0, 0).to(
+      jsonData.json_response.video.scenes[7].variable_value.numeric_value
+        .fixed_cost,
+      2
+    )
   );
 
   for (let i = 0; i < fullText.length; i++) {

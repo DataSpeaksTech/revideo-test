@@ -10,13 +10,12 @@ import {
 } from "@revideo/2d";
 
 // import jsonData from "../event.json";
-import jsonData from "./formatted_agri_loss.json";
+// import jsonData from "./formatted_agri_loss.json";
 
 import { all, createRef, waitFor } from "@revideo/core";
 
-function* totalProjectCost(view: View2D,videoJson : any) {
-
-  var jsonData = videoJson
+function* totalProjectCost(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
   const rupeeImgRef = createRef<Img>();
 
   const moneyRectRef = createRef<Rect>();
@@ -277,7 +276,10 @@ function* totalProjectCost(view: View2D,videoJson : any) {
 
   yield* everythingLayoutRef1().position.x(600, 0.5);
 
-  yield* totalProjectCostTxtRef().text(jsonData.json_response.video.scenes[2].text , 0.5);
+  yield* totalProjectCostTxtRef().text(
+    jsonData.json_response.video.scenes[2].text,
+    0.5
+  );
   yield* all(rupeeImgRef().scale(1, 1), rupeeImgRef().opacity(1, 1));
 
   yield* all(

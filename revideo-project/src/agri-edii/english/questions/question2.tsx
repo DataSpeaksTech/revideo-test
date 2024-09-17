@@ -13,11 +13,10 @@ import {
 import { all, createRef, createSignal, tween, waitFor } from "@revideo/core";
 
 // import jsonData from "../event.json";
-import jsonData from "../formatted_agri_loss.json";
+// import jsonData from "../formatted_agri_loss.json";
 
-function* question2(view: View2D,videoJson : any) {
-
-  var jsonData = videoJson
+function* question2(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
   const QuestionFarmerVideoRef = createRef<Video>();
   const AnswerFarmerVideoRef = createRef<Video>();
   const chatBubbleRef = createRef<Rect>();

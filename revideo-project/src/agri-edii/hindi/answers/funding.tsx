@@ -1,10 +1,9 @@
 import { Circle, Layout, Txt, View2D, Img, Video } from "@revideo/2d";
 import { all, createRef, createSignal, waitFor } from "@revideo/core";
-import jsonData from "./formatted_agri_loss.json";
+// import jsonData from "./formatted_agri_loss.json";
 
-function* funding(view: View2D,videoJson : any) {
-
-  var jsonData = videoJson
+function* funding(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
   const circle1 = createRef<Circle>();
   const circle2 = createRef<Circle>();
   const mergedCircle = createRef<Circle>();
@@ -140,7 +139,8 @@ function* funding(view: View2D,videoJson : any) {
   yield* all(
     circle1().scale(1, 2),
     yourContributionSignal(0, 0).to(
-      jsonData.json_response.video.scenes[3].variable_value.numeric_value.my_contribution,
+      jsonData.json_response.video.scenes[3].variable_value.numeric_value
+        .my_contribution,
       2
     )
   );
@@ -152,7 +152,8 @@ function* funding(view: View2D,videoJson : any) {
   yield* all(
     circle2().scale(1, 2),
     bankFinanceSignal(0, 0).to(
-      jsonData.json_response.video.scenes[3].variable_value.numeric_value.bank_finance,
+      jsonData.json_response.video.scenes[3].variable_value.numeric_value
+        .bank_finance,
       2
     )
   );

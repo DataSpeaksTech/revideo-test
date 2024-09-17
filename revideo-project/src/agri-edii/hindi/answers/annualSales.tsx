@@ -1,10 +1,9 @@
 import { Circle, Img, Layout, Rect, Txt, Video, View2D } from "@revideo/2d";
 import { all, createRef, createSignal, waitFor } from "@revideo/core";
-import jsonData from "./formatted_agri_loss.json";
+// import jsonData from "./formatted_agri_loss.json";
 
-function* annualSales(view: View2D,videoJson : any) {
-
-  var jsonData = videoJson
+function* annualSales(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
   const annualSalesCircleRef = createRef<Circle>();
   const annualSalesRsTxtRef = createRef<Txt>();
   const annualSalesTxtRef = createRef<Txt>();
@@ -152,7 +151,10 @@ function* annualSales(view: View2D,videoJson : any) {
 
       <Txt
         ref={netProfitTxtRef}
-        text={jsonData.json_response.video.scenes[6].variable_value.bullet_points[4].text}
+        text={
+          jsonData.json_response.video.scenes[6].variable_value.bullet_points[4]
+            .text
+        }
         fontSize={70}
         opacity={0}
         x={250}
@@ -166,7 +168,8 @@ function* annualSales(view: View2D,videoJson : any) {
 
   AnswerFarmerVideoRef().play();
 
-  const scene = jsonData.json_response.video.scenes[6].variable_value.numeric_value;
+  const scene =
+    jsonData.json_response.video.scenes[6].variable_value.numeric_value;
 
   // Determine the value to use for the signal
   const netValue = scene.net_value;
@@ -192,16 +195,15 @@ function* annualSales(view: View2D,videoJson : any) {
   yield* all(annualSalesCircleRef().x(150, 1), annualSalesTxtRef().x(150, 1));
 
   yield* all(
-    
-      annualSalesSignal(
-        jsonData.json_response.video.scenes[6].variable_value.numeric_value
-          .annual_sales,
-        0
-      ).to(
-        jsonData.json_response.video.scenes[6].variable_value.numeric_value
-          .net_value,
-        2
-      ),
+    annualSalesSignal(
+      jsonData.json_response.video.scenes[6].variable_value.numeric_value
+        .annual_sales,
+      0
+    ).to(
+      jsonData.json_response.video.scenes[6].variable_value.numeric_value
+        .net_value,
+      2
+    ),
     annualSalesTxtRef().fontSize(50, 1),
     annualSalesTxtRef().opacity(0, 1),
     annualSalesRsTxtRef().fontSize(50, 1),
@@ -227,7 +229,8 @@ function* annualSales(view: View2D,videoJson : any) {
     annualSalesCircleRef().size(350, 2),
     annualSalesSignal(
       jsonData.json_response.video.scenes[6].variable_value.numeric_value
-        .net_value, 1
+        .net_value,
+      1
     ),
     taxesCircleRef().opacity(1, 2),
     taxesCircleRef().x(500, 2),
@@ -247,30 +250,31 @@ function* annualSales(view: View2D,videoJson : any) {
     annualSalesRsTxtRef().fontSize(90, 2)
   );
 
-  const referenceSentence = "वार्षिक बिक्री 196 लाख रुपये होने का अनुमान है, और प्रोडक्शन कॉस्ट 233.57 लाख रुपये। टैक्स और डेप्रिसिएशन के बाद, आपका -38.63 लाख रुपये होने का अनुमान है।";
-  const referenceWordCount = referenceSentence.split(' ').length;
+  const referenceSentence =
+    "वार्षिक बिक्री 196 लाख रुपये होने का अनुमान है, और प्रोडक्शन कॉस्ट 233.57 लाख रुपये। टैक्स और डेप्रिसिएशन के बाद, आपका -38.63 लाख रुपये होने का अनुमान है।";
+  const referenceWordCount = referenceSentence.split(" ").length;
 
   // Get the sentence from JSON and calculate its word count
   const sentence = jsonData.json_response.video.scenes[6].sentence;
-  const sentenceWordCount = sentence.split(' ').length;
-console.log("sentence ===>>>"+sentence)
+  const sentenceWordCount = sentence.split(" ").length;
+  console.log("sentence ===>>>" + sentence);
   // Define base duration and extra word duration
   const baseDuration = 0.3; // Base duration in seconds
   const extraWordDuration = 0.3; // Extra duration per additional word
 
   // Calculate the wait duration
-  const waitDuration = sentenceWordCount > referenceWordCount
-    ? baseDuration + (sentenceWordCount - referenceWordCount) * extraWordDuration
-    : baseDuration;
+  const waitDuration =
+    sentenceWordCount > referenceWordCount
+      ? baseDuration +
+        (sentenceWordCount - referenceWordCount) * extraWordDuration
+      : baseDuration;
 
   // Wait for the calculated duration
   yield* waitFor(waitDuration);
-console.log("Duration+++++++++++"+ waitDuration);
+  console.log("Duration+++++++++++" + waitDuration);
 
   yield* everythingLayoutRef2().scale(1.1, 1.5);
   yield* everythingLayoutRef2().opacity(0, 0.5);
-
-  
 }
 
 export default annualSales;

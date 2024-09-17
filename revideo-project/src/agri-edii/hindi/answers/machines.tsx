@@ -9,13 +9,12 @@ import {
   View2D,
 } from "@revideo/2d";
 // import jsonData from "../event.json";
-import jsonData from "./formatted_agri_loss.json";
+// import jsonData from "./formatted_agri_loss.json";
 
 import { all, createRef, waitFor } from "@revideo/core";
 
-function* machines(view: View2D,videoJson : any) {
-
-  var jsonData = videoJson
+function* machines(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
   const lathesCircleRef = createRef<Circle>();
   const shapersCircleRef = createRef<Circle>();
   const grindersCircleRef = createRef<Circle>();

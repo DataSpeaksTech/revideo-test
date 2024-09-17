@@ -12,12 +12,11 @@ import {
 import { all, createRef, createSignal, tween, waitFor } from "@revideo/core";
 
 // import jsonData from "../event.json";
-import jsonData from "../formatted_agri_loss.json";
+// import jsonData from "../formatted_agri_loss.json";
 
-function* question1(view: View2D,videoJson : any) {
+function* question1(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
 
-  var jsonData = videoJson
-  
   const QuestionFarmerVideoRef = createRef<Video>();
   const AnswerFarmerVideoRef = createRef<Video>();
   const chatBubbleRef = createRef<Rect>();
@@ -27,16 +26,13 @@ function* question1(view: View2D,videoJson : any) {
   const everythingLayoutRef2 = createRef<Layout>();
   const rectRef = createRef<Polygon>();
 
-  
   // const fullText = jsonData.json_response.video.scenes[1].question;
-  
+
   const titleSignal = createSignal("");
 
   view.fontFamily("outfit");
 
   const bgImageRef = createRef<Img>();
-
-  
 
   yield view.add(
     <Layout ref={everythingLayoutRef1}>
@@ -106,9 +102,7 @@ function* question1(view: View2D,videoJson : any) {
     </Layout>
   );
 
-
   QuestionFarmerVideoRef().play();
- 
 
   yield* all(
     everythingLayoutRef1().scale(2, 1),
@@ -119,8 +113,7 @@ function* question1(view: View2D,videoJson : any) {
   yield* all(
     chatBubbleRef().opacity(1, 1),
     rectRef().opacity(1, 1),
-    chatTxtRef().text(jsonData.json_response.video.scenes[1].question, 4),
-    
+    chatTxtRef().text(jsonData.json_response.video.scenes[1].question, 4)
   );
 
   QuestionFarmerVideoRef().pause();

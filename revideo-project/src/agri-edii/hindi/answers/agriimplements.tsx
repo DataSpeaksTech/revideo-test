@@ -12,11 +12,10 @@ import {
 import { tween, all, createRef, createSignal, waitFor } from "@revideo/core";
 
 // Import JSON data
-import jsonData from "./formatted_agri_loss.json";
+// import jsonData from "./formatted_agri_loss.json";
 
-function* agriimplements(view: View2D,videoJson : any) {
-
-  var jsonData = videoJson
+function* agriimplements(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
   // Create references for circles, images, rectangles, and texts
   const selfinjuryCircleRef = createRef<Circle>();
   const sucideCircleRef = createRef<Circle>();
@@ -48,7 +47,8 @@ function* agriimplements(view: View2D,videoJson : any) {
   const profitableTxtRef = createRef<Txt>();
 
   // Texts and durations
-  const fullText1 = "Starting an agricultural implements\nmanufacturing business involves";
+  const fullText1 =
+    "Starting an agricultural implements\nmanufacturing business involves";
   const duration1 = 3; // Total duration for the entire text animation
   const charDuration1 = duration1 / fullText1.length; // Duration per character
 
@@ -143,7 +143,10 @@ function* agriimplements(view: View2D,videoJson : any) {
         >
           <Txt
             ref={carefulPlanningTxtRef}
-            text={jsonData.json_response.video.scenes[9].variable_value.bullet_points[0].text}
+            text={
+              jsonData.json_response.video.scenes[9].variable_value
+                .bullet_points[0].text
+            }
             fontSize={40}
             fontWeight={400}
             letterSpacing={3}
@@ -178,7 +181,10 @@ function* agriimplements(view: View2D,videoJson : any) {
         >
           <Txt
             ref={budgetingTxtRef}
-            text={jsonData.json_response.video.scenes[9].variable_value.bullet_points[1].text}
+            text={
+              jsonData.json_response.video.scenes[9].variable_value
+                .bullet_points[1].text
+            }
             fontSize={40}
             fontWeight={400}
             letterSpacing={3}
@@ -213,7 +219,10 @@ function* agriimplements(view: View2D,videoJson : any) {
         >
           <Txt
             ref={rightManpowerTxtRef}
-            text={jsonData.json_response.video.scenes[9].variable_value.bullet_points[2].text}
+            text={
+              jsonData.json_response.video.scenes[9].variable_value
+                .bullet_points[2].text
+            }
             fontSize={40}
             fontWeight={400}
             letterSpacing={3}
@@ -248,7 +257,10 @@ function* agriimplements(view: View2D,videoJson : any) {
         >
           <Txt
             ref={machineryTxtRef}
-            text={jsonData.json_response.video.scenes[9].variable_value.bullet_points[3].text}
+            text={
+              jsonData.json_response.video.scenes[9].variable_value
+                .bullet_points[3].text
+            }
             fontSize={40}
             fontWeight={400}
             letterSpacing={3}
@@ -283,7 +295,10 @@ function* agriimplements(view: View2D,videoJson : any) {
         >
           <Txt
             ref={financialBackingTxtRef}
-            text={jsonData.json_response.video.scenes[9].variable_value.bullet_points[4].text}
+            text={
+              jsonData.json_response.video.scenes[9].variable_value
+                .bullet_points[4].text
+            }
             fontSize={40}
             fontWeight={400}
             letterSpacing={3}
@@ -296,7 +311,9 @@ function* agriimplements(view: View2D,videoJson : any) {
         width={1200}
         opacity={0}
         radius={10}
-        height={jsonData.json_response.video.scenes[9].text.length > 57 ? 190 : 100} 
+        height={
+          jsonData.json_response.video.scenes[9].text.length > 57 ? 190 : 100
+        }
         fill={"#F9F9F9"}
         y={420}
       >
@@ -305,7 +322,6 @@ function* agriimplements(view: View2D,videoJson : any) {
           fontFamily={"outfit"}
           fontSize={60}
           fontWeight={700}
-          
           fill={"black"}
           y={0}
         />
@@ -370,33 +386,32 @@ function* agriimplements(view: View2D,videoJson : any) {
     profitableTxtRef().text(jsonData.json_response.video.scenes[9].text, 2)
   );
 
-  
-
-  const referenceSentence = "कृषि उपकरण निर्माण बिजनेस शुरू करने में सावधानीपूर्वक योजना और बजटिंग की जरूरत होती है। सही कर्मचारियों, मशीनरी, और फाइनेंसियल सपोर्ट के साथ, आपका बिजनेस प्रॉफिटेबल होने का वादा करता है।";
-  const referenceWordCount = referenceSentence.split(' ').length;
+  const referenceSentence =
+    "कृषि उपकरण निर्माण बिजनेस शुरू करने में सावधानीपूर्वक योजना और बजटिंग की जरूरत होती है। सही कर्मचारियों, मशीनरी, और फाइनेंसियल सपोर्ट के साथ, आपका बिजनेस प्रॉफिटेबल होने का वादा करता है।";
+  const referenceWordCount = referenceSentence.split(" ").length;
 
   // Get the sentence from JSON and calculate its word count
   const sentence = jsonData.json_response.video.scenes[9].sentence;
-  const sentenceWordCount = sentence.split(' ').length;
-console.log("sentence ===>>>"+sentence)
+  const sentenceWordCount = sentence.split(" ").length;
+  console.log("sentence ===>>>" + sentence);
   // Define base duration and extra word duration
   const baseDuration = 1.5; // Base duration in seconds
   const extraWordDuration = 0.4; // Extra duration per additional word
 
   // Calculate the wait duration
-  const waitDuration = sentenceWordCount > referenceWordCount
-    ? baseDuration + (sentenceWordCount - referenceWordCount) * extraWordDuration
-    : baseDuration;
+  const waitDuration =
+    sentenceWordCount > referenceWordCount
+      ? baseDuration +
+        (sentenceWordCount - referenceWordCount) * extraWordDuration
+      : baseDuration;
 
   // Wait for the calculated duration
   yield* waitFor(waitDuration);
-console.log("Duration+++++++++++"+ waitDuration);
+  console.log("Duration+++++++++++" + waitDuration);
 
-AnswerFarmerVideoRef().pause();
+  AnswerFarmerVideoRef().pause();
 
   yield* everythingLayoutRef2().opacity(0, 1.5);
 }
-
-
 
 export default agriimplements;

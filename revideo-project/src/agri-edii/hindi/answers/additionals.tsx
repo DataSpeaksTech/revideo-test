@@ -1,10 +1,9 @@
 import { Circle, Img, Layout, Rect, Txt, Video, View2D } from "@revideo/2d";
 import { all, createRef, waitFor } from "@revideo/core";
-import jsonData from "./formatted_agri_loss.json"; // Make sure this path is correct
+// import jsonData from "./formatted_agri_loss.json"; // Make sure this path is correct
 
-function* additionals(view: View2D,videoJson : any) {
-
-  var jsonData = videoJson
+function* additionals(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
   const vehiclesCircleRef = createRef<Circle>();
   const computerCircleRef = createRef<Circle>();
   const furnitureCircleRef = createRef<Circle>();
@@ -88,7 +87,10 @@ function* additionals(view: View2D,videoJson : any) {
         ref={vehiclesRectRef}
         fill={"blue"}
         radius={10}
-        width={jsonData.json_response.video.scenes[5].variable_value.bullet_points[0].text.length * 30}
+        width={
+          jsonData.json_response.video.scenes[5].variable_value.bullet_points[0]
+            .text.length * 30
+        }
         height={70}
         x={-200}
         y={10}
@@ -96,7 +98,10 @@ function* additionals(view: View2D,videoJson : any) {
       >
         <Txt
           ref={vehiclesTxtRef}
-          text={jsonData.json_response.video.scenes[5].variable_value.bullet_points[0].text}
+          text={
+            jsonData.json_response.video.scenes[5].variable_value
+              .bullet_points[0].text
+          }
           fontSize={40}
           fontWeight={400}
           letterSpacing={3}
@@ -127,7 +132,10 @@ function* additionals(view: View2D,videoJson : any) {
         ref={computerRectRef}
         fill={"blue"}
         radius={10}
-        width={jsonData.json_response.video.scenes[5].variable_value.bullet_points[1].text.length * 30}
+        width={
+          jsonData.json_response.video.scenes[5].variable_value.bullet_points[1]
+            .text.length * 30
+        }
         height={70}
         x={250}
         y={10}
@@ -135,7 +143,10 @@ function* additionals(view: View2D,videoJson : any) {
       >
         <Txt
           ref={computerTxtRef}
-          text={jsonData.json_response.video.scenes[5].variable_value.bullet_points[1].text}
+          text={
+            jsonData.json_response.video.scenes[5].variable_value
+              .bullet_points[1].text
+          }
           fontSize={40}
           fontWeight={400}
           letterSpacing={3}
@@ -166,7 +177,10 @@ function* additionals(view: View2D,videoJson : any) {
         ref={furnitureRectRef}
         fill={"blue"}
         radius={10}
-        width={jsonData.json_response.video.scenes[5].variable_value.bullet_points[2].text.length * 30}
+        width={
+          jsonData.json_response.video.scenes[5].variable_value.bullet_points[2]
+            .text.length * 30
+        }
         height={70}
         x={700}
         y={10}
@@ -174,7 +188,10 @@ function* additionals(view: View2D,videoJson : any) {
       >
         <Txt
           ref={furnitureTxtRef}
-          text={jsonData.json_response.video.scenes[5].variable_value.bullet_points[2].text}
+          text={
+            jsonData.json_response.video.scenes[5].variable_value
+              .bullet_points[2].text
+          }
           fontSize={40}
           fontWeight={400}
           letterSpacing={3}
@@ -210,7 +227,7 @@ function* additionals(view: View2D,videoJson : any) {
   yield* all(
     vehiclesCircleRef().endAngle(360, 1.2),
     vehiclesImgRef().opacity(1, 1.2),
-    vehiclesRectRef().opacity(1,1.2)
+    vehiclesRectRef().opacity(1, 1.2)
   );
 
   yield* all(

@@ -10,11 +10,10 @@ import {
 } from "@revideo/2d";
 
 import { all, createRef, createSignal, tween, waitFor } from "@revideo/core";
-import jsonData from "./formatted_agri_loss.json";
+// import jsonData from "./formatted_agri_loss.json";
 
-function* variablecost(view: View2D,videoJson : any) {
-
-  var jsonData = videoJson
+function* variablecost(view: View2D, videoJson: any) {
+  var jsonData = videoJson;
   const triangleTxtRef = createRef<Txt>();
   const variableCostTxtRef = createRef<Txt>();
   const triangleRef = createRef<Polygon>();
@@ -252,7 +251,11 @@ function* variablecost(view: View2D,videoJson : any) {
 
   // Use JSON data to set the variable cost value
   yield* tween(2, (value) => {
-    numberSignal(value * jsonData.json_response.video.scenes[8].variable_value.numeric_value.variable_cost);
+    numberSignal(
+      value *
+        jsonData.json_response.video.scenes[8].variable_value.numeric_value
+          .variable_cost
+    );
   });
 
   yield* waitFor(1.5);
