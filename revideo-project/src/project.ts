@@ -3,7 +3,10 @@ import axios from 'axios';
 import example from './scenes/example?scene';
 import { logProgressToConsole } from './render';
 
+import mainproject from "./MainProject/mainproject?scene"
+
 
 export default makeProject({
-  scenes: [example],
+  scenes: [mainproject],
+  // scenes: [example],
 });

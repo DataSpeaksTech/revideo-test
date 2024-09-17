@@ -1,0 +1,408 @@
+{
+  "success": true,
+  "parser_type": "",
+  "project_type": "",
+  "template_selected": "",
+  "language_selected": "",
+  "json_response": {
+      "status": "SUCCESS",
+      "message": "SUCCESS",
+      "id": "",
+      "uid": "",
+      "video": {
+          "scenes": {
+              "1": {
+                  "question": "तो, मैं अपने कृषि उपकरण व्यवसाय की शुरुआत करने के बारे में सोच रहा हूँ। मुझे क्या-क्या चाहिए होगा?",
+                  "sentence": "सबसे पहले, आपको एक प्रोडक्शन मैनेजर, कुशल, अर्ध-कुशल और अकुशल वर्कर, और एक अकाउंटेंट की जरूरत होगी। कर्मचारियों की कुल वार्षिक लागत, पीपीएफ और ईएसआई जैसी कानूनी लागतों सहित, लगभग 44.70 लाख रुपये होगी।",
+                  "text": "कुल वार्षिक लागत",
+                  "text_style": "",
+                  "variable_value": {
+                      "bullet_points": [
+                          {
+                              "text": "प्रोडक्शन मैनेजर",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "कुशल",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "अर्ध-कुशल",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "अकुशल वर्कर",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "अकाउंटेंट",
+                              "image": "",
+                              "timestamp": ""
+                          }
+                      ],
+                      "numeric_value": {
+                          "total_annual_cost": 44.7
+                      }
+                  },
+                  "media": {
+                      "image": [],
+                      "video": []
+                  },
+                  "media_style": "",
+                  "background_asset": "",
+                  "scene_type": "",
+                  "timestamp_english": "",
+                  "duration_english": "",
+                  "timestamp_hindi": "",
+                  "duration_hindi": ""
+              },
+              "2": {
+                  "question": "और कुल प्रोजेक्ट कॉस्ट के बारे में क्या? मुझे कितना निवेश करने के लिए तैयार रहना चाहिए?",
+                  "sentence": "कुल प्रोजेक्ट कॉस्ट 46.68 लाख रुपये है। इसमें शुरुआती खर्च, मशीनरी, उपकरण, फर्नीचर, और वर्किंग कैपिटल शामिल है। यह आपके बिजनेस को शुरू करने के लिए एक व्यापक बजट है।",
+                  "text": "कुल प्रोजेक्ट कॉस्ट",
+                  "text_style": "",
+                  "variable_value": {
+                      "bullet_points": [
+                          {
+                              "text": "शुरुआती खर्च",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "मशीनरी",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "उपकरण",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "फर्नीचर",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "वर्किंग कैपिटल",
+                              "image": "",
+                              "timestamp": ""
+                          }
+                      ],
+                      "numeric_value": {
+                          "total_project_cost": 46.68
+                      }
+                  },
+                  "media": {
+                      "image": [],
+                      "video": []
+                  },
+                  "media_style": "",
+                  "background_asset": "",
+                  "scene_type": "",
+                  "timestamp_english": "",
+                  "duration_english": "",
+                  "timestamp_hindi": "",
+                  "duration_hindi": ""
+              },
+              "3": {
+                  "question": "यह काफी ज्यादा लगता है। आप फंडिंग कैसे मैनेज करते हैं?",
+                  "sentence": "फंडिंग दो स्रोतों से आती है: मेरी योगदान राशि 18.67 लाख रुपये और बैंक फाइनेंस 28.01 लाख रुपये। मिलकर ये कुल प्रोजेक्ट कॉस्ट 46.68 लाख रुपये को कवर करते हैं।",
+                  "text": "फंडिंग के स्रोत",
+                  "text_style": "",
+                  "variable_value": {
+                      "bullet_points": [
+                          {
+                              "text": "मेरी योगदान राशि",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "बैंक फाइनेंस",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "कुल प्रोजेक्ट कॉस्ट",
+                              "image": "",
+                              "timestamp": ""
+                          }
+                      ],
+                      "numeric_value": {
+                          "my_contribution": 18.67,
+                          "bank_finance": 28.01,
+                          "total_project_cost": 46.68
+                      }
+                  },
+                  "media": {
+                      "image": [],
+                      "video": []
+                  },
+                  "media_style": "",
+                  "background_asset": "",
+                  "scene_type": "",
+                  "timestamp_english": "",
+                  "duration_english": "",
+                  "timestamp_hindi": "",
+                  "duration_hindi": ""
+              },
+              "4": {
+                  "question": "मुझे किस तरह की मशीनरी की जरूरत होगी?",
+                  "sentence": "आपको अलग-अलग मशीनों की जरूरत होगी जैसे कि लेथ, शेपर्स, ग्राइंडर्स, और ड्रिलिंग मशीनें, जिनकी कुल लागत 5.32 लाख रुपये है।",
+                  "text": "मशीनरी की लागत",
+                  "text_style": "",
+                  "variable_value": {
+                      "bullet_points": [
+                          {
+                              "text": "लेथ",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "शेपर्स",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "ग्राइंडर्स",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "ड्रिलिंग मशीनें",
+                              "image": "",
+                              "timestamp": ""
+                          }
+                      ],
+                      "numeric_value": {
+                          "total_machines_cost": 5.32
+                      }
+                  },
+                  "media": {
+                      "image": [],
+                      "video": []
+                  },
+                  "media_style": "",
+                  "background_asset": "",
+                  "scene_type": "",
+                  "timestamp_english": "",
+                  "duration_english": "",
+                  "timestamp_hindi": "",
+                  "duration_hindi": ""
+              },
+              "5": {
+                  "question": "",
+                  "sentence": "इसके अलावा, वाहन, कंप्यूटर, और ऑफिस फर्नीचर की लागत लगभग 4.65 लाख रुपये होगी।",
+                  "text": "अतिरिक्त लागत",
+                  "text_style": "",
+                  "variable_value": {
+                      "bullet_points": [
+                          {
+                              "text": "वाहन",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "कंप्यूटर",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "ऑफिस फर्नीचर",
+                              "image": "",
+                              "timestamp": ""
+                          }
+                      ],
+                      "numeric_value": {
+                          "total_additional_cost": 4.65
+                      }
+                  },
+                  "media": {
+                      "image": [],
+                      "video": []
+                  },
+                  "media_style": "",
+                  "background_asset": "",
+                  "scene_type": "",
+                  "timestamp_english": "",
+                  "duration_english": "",
+                  "timestamp_hindi": "",
+                  "duration_hindi": ""
+              },
+              "6": {
+                  "question": "अनुमानित सेल्स और प्रोडक्शन कॉस्ट के बारे में क्या?",
+                  "sentence": "वार्षिक बिक्री 196.00 लाख रुपये होने का अनुमान है, और प्रोडक्शन कॉस्ट 233.57 लाख रुपये। टैक्स और डेप्रिसिएशन के बाद, आपका शुद्ध लाभ -34.77 लाख रुपये होने का अनुमान है। हालांकि, इस पर काम करके इसे सुधारने की संभावना है।",
+                  "text": "अनुमानित बिक्री और लागत",
+                  "text_style": "",
+                  "variable_value": {
+                      "bullet_points": [
+                          {
+                              "text": "वार्षिक बिक्री",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "प्रोडक्शन कॉस्ट",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "टैक्स",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "डेप्रिसिएशन",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "शुद्ध लाभ",
+                              "image": "",
+                              "timestamp": ""
+                          }
+                      ],
+                      "numeric_value": {
+                          "annual_sales": 196,
+                          "production_cost": 233.57,
+                          "net_profit": 34.77
+                      }
+                  },
+                  "media": {
+                      "image": [],
+                      "video": []
+                  },
+                  "media_style": "",
+                  "background_asset": "",
+                  "scene_type": "",
+                  "timestamp_english": "",
+                  "duration_english": "",
+                  "timestamp_hindi": "",
+                  "duration_hindi": ""
+              },
+              "7": {
+                  "question": "फिक्स्ड और वेरिएबल कॉस्ट्स के बारे में क्या?",
+                  "sentence": "फिक्स्ड कॉस्ट्स, जिसमें किराया, डेप्रिसिएशन, और कर्मचारियों की एक हिस्सा शामिल है, कुल 16.95 लाख रुपये होगी।",
+                  "text": "फिक्स्ड कॉस्ट्स",
+                  "text_style": "",
+                  "variable_value": {
+                      "bullet_points": [
+                          {
+                              "text": "किराया",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "डेप्रिसिएशन",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "कर्मचारियों की लागत",
+                              "image": "",
+                              "timestamp": ""
+                          }
+                      ],
+                      "numeric_value": {
+                          "fixed_cost": 16.95
+                      }
+                  },
+                  "media": {
+                      "image": [],
+                      "video": []
+                  },
+                  "media_style": "",
+                  "background_asset": "",
+                  "scene_type": "",
+                  "timestamp_english": "",
+                  "duration_english": "",
+                  "timestamp_hindi": "",
+                  "duration_hindi": ""
+              },
+              "8": {
+                  "question": "",
+                  "sentence": "कच्चे माल, यूटिलिटीज, और अन्य खर्चों के लिए वेरिएबल कॉस्ट्स कुल 217.68 लाख रुपये होगी।",
+                  "text": "वेरिएबल कॉस्ट्स",
+                  "text_style": "",
+                  "variable_value": {
+                      "bullet_points": [],
+                      "numeric_value": {
+                          "variable_cost": 217.68
+                      }
+                  },
+                  "media": {
+                      "image": [],
+                      "video": []
+                  },
+                  "media_style": "",
+                  "background_asset": "",
+                  "scene_type": "",
+                  "timestamp_english": "",
+                  "duration_english": "",
+                  "timestamp_hindi": "",
+                  "duration_hindi": ""
+              },
+              "9": {
+                  "question": "क्या मुझे कुछ और जानना चाहिए?",
+                  "sentence": "कृषि उपकरण निर्माण बिजनेस शुरू करने में सावधानीपूर्वक योजना और बजटिंग की जरूरत होती है। सही कर्मचारियों, मशीनरी, और फाइनेंसियल सपोर्ट के साथ, आपका बिजनेस प्रॉफिटेबल होने का वादा करता है।",
+                  "text": "आपका बिजनेस प्रॉफिटेबल होने का वादा करता है",
+                  "text_style": "",
+                  "variable_value": {
+                      "bullet_points": [
+                          {
+                              "text": "योजना",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "बजटिंग",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "कर्मचारी",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "मशीनरी",
+                              "image": "",
+                              "timestamp": ""
+                          },
+                          {
+                              "text": "फाइनेंसियल सपोर्ट",
+                              "image": "",
+                              "timestamp": ""
+                          }
+                      ],
+                      "numeric_value": {}
+                  },
+                  "media": {
+                      "image": [],
+                      "video": []
+                  },
+                  "media_style": "",
+                  "background_asset": "",
+                  "scene_type": "",
+                  "timestamp_english": "",
+                  "duration_english": "",
+                  "timestamp_hindi": "",
+                  "duration_hindi": ""
+              }
+          }
+      },
+      "combined_audio_s3_english": "",
+      "combined_audio_len_english": "",
+      "combined_audio_s3_hindi": "",
+      "combined_audio_len_hindi": "",
+      "background_music": "",
+      "background_music_volume": ""
+  },
+  "file_s3_url": "",
+  "type": "host/conversational",
+  "combined_audio_s3_hindi": "s3://data-speaks-audiofile-bucket/Wsx3hhD9ArD4uGzZ75zuXF.mp3"
+}

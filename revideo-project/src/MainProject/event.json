@@ -1,0 +1,408 @@
+{
+  "success": true,
+  "parser_type": "",
+  "project_type": "",
+  "template_selected": "agri_plan_convo1",
+  "language_selected": "english",
+  "json_response": {
+    "status": "SUCCESS",
+    "message": "SUCCESS",
+    "id": "",
+    "uid": "",
+    "video": {
+      "scenes": {
+        "1": {
+          "question": "So, I'm thinking about starting my own agricultural implements business. What do I need to get started?",
+          "sentence": "Well, first off, you'll need a production manager, skilled, semi-skilled, and unskilled workers, plus an accountant. The total annual cost for manpower, including statutory costs like PPF and ESI, will be around ₹44.70 lakhs.",
+          "text": "Total annual cost for manpower",
+          "text_style": "",
+          "variable_value": {
+            "bullet_points": [
+              {
+                "text": "Production manager",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Skilled",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Semi-skilled",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Unskilled workers",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Accountant",
+                "image": "",
+                "timestamp": ""
+              }
+            ],
+            "numeric_value": {
+              "total_annual_cost": 44.7
+            }
+          },
+          "media": {
+            "image": [],
+            "video": []
+          },
+          "media_style": "",
+          "background_asset": "",
+          "scene_type": "",
+          "timestamp_english": "",
+          "duration_english": "",
+          "timestamp_hindi": "",
+          "duration_hindi": ""
+        },
+        "2": {
+          "question": "And what about the total project cost? How much should I be prepared to invest?",
+          "sentence": "The total project cost is ₹46.68 lakhs. This includes pre-operative expenses, machinery, equipment, furniture, and working capital. It's a comprehensive budget to get your business off the ground.",
+          "text": "Total project cost",
+          "text_style": "",
+          "variable_value": {
+            "bullet_points": [
+              {
+                "text": "Pre-operative expenses",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Machinery",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Equipment",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Furniture",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Working capital",
+                "image": "",
+                "timestamp": ""
+              }
+            ],
+            "numeric_value": {
+              "total_project_cost": 46.68
+            }
+          },
+          "media": {
+            "image": [],
+            "video": []
+          },
+          "media_style": "",
+          "background_asset": "",
+          "scene_type": "",
+          "timestamp_english": "",
+          "duration_english": "",
+          "timestamp_hindi": "",
+          "duration_hindi": ""
+        },
+        "3": {
+          "question": "That sounds like a lot. How do you manage the funding?",
+          "sentence": "The funding comes from two sources: ₹18.67 lakhs from my contribution and ₹28.01 lakhs from bank finance. Together, they cover the total project cost of ₹46.68 lakhs.",
+          "text": "The funding will come from two sources",
+          "text_style": "",
+          "variable_value": {
+            "bullet_points": [
+              {
+                "text": "My contribution",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Bank finance",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Total project cost",
+                "image": "",
+                "timestamp": ""
+              }
+            ],
+            "numeric_value": {
+              "my_contribution": 18.67,
+              "bank_finance": 28.01,
+              "total_project_cost": 46.68
+            }
+          },
+          "media": {
+            "image": [],
+            "video": []
+          },
+          "media_style": "",
+          "background_asset": "",
+          "scene_type": "",
+          "timestamp_english": "",
+          "duration_english": "",
+          "timestamp_hindi": "",
+          "duration_hindi": ""
+        },
+        "4": {
+          "question": "What kind of machinery do I need?",
+          "sentence": "You'll need various machines like lathes, shapers, grinders, and drilling machines, totaling ₹5.32 lakhs.",
+          "text": "",
+          "text_style": "",
+          "variable_value": {
+            "bullet_points": [
+              {
+                "text": "Lathes",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Shapers",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Grinders",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Drilling machines",
+                "image": "",
+                "timestamp": ""
+              }
+            ],
+            "numeric_value": {
+              "total_machines_cost": 5.32
+            }
+          },
+          "media": {
+            "image": [],
+            "video": []
+          },
+          "media_style": "",
+          "background_asset": "",
+          "scene_type": "",
+          "timestamp_english": "",
+          "duration_english": "",
+          "timestamp_hindi": "",
+          "duration_hindi": ""
+        },
+        "5": {
+          "question": "",
+          "sentence": "Additionally, vehicles, computers, and office furniture will cost around ₹4.65 lakhs.",
+          "text": "",
+          "text_style": "",
+          "variable_value": {
+            "bullet_points": [
+              {
+                "text": "Vehicle",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Computer",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Office furniture",
+                "image": "",
+                "timestamp": ""
+              }
+            ],
+            "numeric_value": {
+              "total_machine_cost": 4.65
+            }
+          },
+          "media": {
+            "image": [],
+            "video": []
+          },
+          "media_style": "",
+          "background_asset": "",
+          "scene_type": "",
+          "timestamp_english": "",
+          "duration_english": "",
+          "timestamp_hindi": "",
+          "duration_hindi": ""
+        },
+        "6": {
+          "question": "What are the projected sales and production costs?",
+          "sentence": "Annual sales are projected to be Rs. 196.00 lakh, with production costs at Rs. 242.57 lakh. After taxes and depreciation, your net loss is expected to be Rs. 47.63 lakh. While a loss is projected initially, this can be turned around with strategic planning and market penetration.",
+          "text": "",
+          "text_style": "",
+          "variable_value": {
+            "bullet_points": [
+              {
+                "text": "Annual sales",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Production cost",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Tax",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Depreciation",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Net loss",
+                "image": "",
+                "timestamp": ""
+              }
+            ],
+            "numeric_value": {
+              "annual_sales": 196,
+              "production_cost": 233.57,
+              "net_profit": -38.63
+            }
+          },
+          "media": {
+            "image": [],
+            "video": []
+          },
+          "media_style": "",
+          "background_asset": "",
+          "scene_type": "",
+          "timestamp_english": "",
+          "duration_english": "",
+          "timestamp_hindi": "",
+          "duration_hindi": ""
+        },
+        "7": {
+          "question": "What about the fixed and variable costs?",
+          "sentence": "Fixed costs, including rent, depreciation, and part of the manpower cost, will total ₹16.95 lakhs.",
+          "text": "",
+          "text_style": "",
+          "variable_value": {
+            "bullet_points": [
+              {
+                "text": "Rent",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Depreciation",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Manpower Cost",
+                "image": "",
+                "timestamp": ""
+              }
+            ],
+            "numeric_value": {
+              "fixed_cost": 16.95
+            }
+          },
+          "media": {
+            "image": [],
+            "video": []
+          },
+          "media_style": "",
+          "background_asset": "",
+          "scene_type": "",
+          "timestamp_english": "",
+          "duration_english": "",
+          "timestamp_hindi": "",
+          "duration_hindi": ""
+        },
+        "8": {
+          "question": "",
+          "sentence": "Variable costs for raw materials, utilities, and other expenses will sum up to ₹217.68 lakhs.",
+          "text": "Variable cost",
+          "text_style": "",
+          "variable_value": {
+            "bullet_points": [],
+            "numeric_value": {
+              "variable_cost": 217.68
+            }
+          },
+          "media": {
+            "image": [],
+            "video": []
+          },
+          "media_style": "",
+          "background_asset": "",
+          "scene_type": "",
+          "timestamp_english": "",
+          "duration_english": "",
+          "timestamp_hindi": "",
+          "duration_hindi": ""
+        },
+        "9": {
+          "question": "Is there anything else I should know?",
+          "sentence": "Starting an agricultural implements manufacturing business involves careful planning and budgeting. With the right manpower, machinery, and financial backing, your venture has a promising potential.",
+          "text": "Your venture has a promising potential.",
+          "text_style": "",
+          "variable_value": {
+            "bullet_points": [
+              {
+                "text": "Planning",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Budgeting",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Manpower",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Machinery",
+                "image": "",
+                "timestamp": ""
+              },
+              {
+                "text": "Financial backing",
+                "image": "",
+                "timestamp": ""
+              }
+            ],
+            "numeric_value": {}
+          },
+          "media": {
+            "image": [],
+            "video": []
+          },
+          "media_style": "",
+          "background_asset": "",
+          "scene_type": "",
+          "timestamp_english": "",
+          "duration_english": "",
+          "timestamp_hindi": "",
+          "duration_hindi": ""
+        }
+      }
+    },
+    "combined_audio_s3_english": "",
+    "combined_audio_len_english": "",
+    "combined_audio_s3_hindi": "",
+    "combined_audio_len_hindi": "",
+    "background_music": "",
+    "background_music_volume": ""
+  },
+  "file_s3_url": "",
+  "type": "host/conversational",
+  "combined_audio_s3_english": "s3://data-speaks-audiofile-bucket/biGykfHHnTRpRiSv9xgBBb.mp3"
+}
